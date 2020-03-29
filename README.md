@@ -3,10 +3,15 @@
 
 Nesse repositório estarão dispostos os arquivos necessários para configuração do ambiente, lembrando que vamos subir esse ambiente usando Google Cloud, o custo do mesmo é de responsabilidade do Aluno, estimo que a utilização do mesmo em umas 3 horas dará menos do que 10 reais, portanto lembre-se de excluir o ambiente depois de utilizado, caso contrário ele será cobrado enquanto ligado.
 
+Nesse tutorial, vamos fazer uma instalação usando Docker, o que deixa o processo muito mais rápido e como nosso foco será mais na utilização do que na configuração da infra, acredito ser a melhor opção.
+
 ## Acessando do Google Cloud:
 Para utilização do Google Cloud é necessário o uso de um Cartão de crédito, mas nada é debitado dele quando cadastrado, caso seja a sua primeira vez na plataforma, após o cadastro você ganha 300 dolares para usar na infra por 12 meses, sendo assim a criação dessa infra não terá custo.
 
-Para acessar e fazer seu cadastro basta ter um email do gmail e entrar nesse link: https://cloud.google.com/
+Para acessar e fazer seu cadastro basta ter um email do gmail e entrar nesse link: 
+
+https://cloud.google.com/
+
 Acho que o processo de cadastro dura menos de 3 min e você já pode usar.
 
 ## Configuração do servidor:
@@ -78,4 +83,3 @@ sudo docker-compose logs -f
 ```
 
 Caso haja alguma duvida, segue o link do vídeo com toda essa implantação passo a passo.
-
