@@ -1,5 +1,5 @@
 # Workshop Elastic - Zero a Hero
-[!(https://github.com/AnselmoBorges/zeroahero/blob/master/Slide1.jpg)]
+[![](https://github.com/AnselmoBorges/zeroahero/blob/master/Slide1.jpg)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
 
 Nesse repositório estarão dispostos os arquivos necessários para configuração do ambiente, lembrando que vamos subir esse ambiente usando Google Cloud, o custo do mesmo é de responsabilidade do Aluno, estimo que a utilização do mesmo em umas 3 horas dará menos do que 10 reais, portanto lembre-se de excluir o ambiente depois de utilizado, caso contrário ele será cobrado enquanto ligado.
 
