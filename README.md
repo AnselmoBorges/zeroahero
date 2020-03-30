@@ -84,8 +84,5 @@ Podemos acompanhar os logs de inicialização de cada serviço com o comando aba
 ```
 sudo docker-compose logs -f
 ```
-
 Caso haja alguma duvida, segue o link do vídeo com toda essa implantação passo a passo.
-
-
-[![](https://github.com/AnselmoBorges/zeroahero/blob/master/Slide1.jpg)](https://youtu.be/aV1euh4B4XE "Instalação do Elasticsearch e Kibana via Docker")
+[![](https://github.com/AnselmoBorges/zeroahero/blob/master/Slide1%202.jpg)](https://youtu.be/aV1euh4B4XE "Instalação do Elasticsearch e Kibana via Docker")
