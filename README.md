@@ -20,7 +20,7 @@ Acho que o processo de cadastro dura menos de 3 min e você já pode usar.
 ## Configuração do servidor:
 Iremos criar um CentOS7 com 1VCPU, 3,75GB de RAM e 20GB de disco. Isso é mais do que o suficiente para nossos testes. Para criar sua maquina faça conforme vídeo abaixo (Clique na imagem para ver):
 
-[![](https://i9.ytimg.com/vi/3PldhJq3ANc/mqdefault.jpg?time=1585525451897&sqp=CNDjhPQF&rs=AOn4CLDq_TrcgkqGVXNtbXDF8BjRmyXQpQ)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
+[![](https://i9.ytimg.com/vi/3PldhJq3ANc/mqdefault.jpg?time=1585586182675&sqp=CLS_iPQF&rs=AOn4CLCOvGK8fL6Id3vgOVvKLCKVGgmQ0A)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
 
 ## Pré requisitos no S.O:
 * Docker instalado
@@ -85,7 +85,7 @@ Podemos acompanhar os logs de inicialização de cada serviço com o comando aba
 sudo docker-compose logs -f
 ```
 Caso haja alguma duvida, segue o link do vídeo com toda essa implantação passo a passo. Clique na imagem!
-[![](https://i9.ytimg.com/vi/aV1euh4B4XE/mqdefault.jpg?time=1585531117773&sqp=CJSQhfQF&rs=AOn4CLB-MuFpMBH7KnXFGoqIgYFBR-BlBw)](https://youtu.be/aV1euh4B4XE "Instalação do Elasticsearch e Kibana via Docker")
+[![](https://i9.ytimg.com/vi/aV1euh4B4XE/mqdefault.jpg?time=1585586260303&sqp=CLS_iPQF&rs=AOn4CLC8LBTM6rDIq9c8Nl1bSBbkKjxP7A)](https://youtu.be/aV1euh4B4XE "Instalação do Elasticsearch e Kibana via Docker")
 
 ## Criação de Cluster no Elastic Cloud:
 Uma outra opção, simples, rápida e eficiente é subir o seu Cluster no ambiente Elastic Cloud, que já vem configurado da maneira adequada, ajustavel de acordo com a sua necessidade, trabalha na infra cloud de sua preferencia (Amazon AWS, Google GCP e Microsoft Azure), e tem um trial de 14 dias sem necessidade de cartão de crédito, somente a conta de email.
