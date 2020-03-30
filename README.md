@@ -18,7 +18,7 @@ https://cloud.google.com/
 Acho que o processo de cadastro dura menos de 3 min e você já pode usar.
 
 ## Configuração do servidor:
-Iremos criar um CentOS7 com 1VCPU, 3,75GB de RAM e 20GB de disco. Isso é mais do que o suficiente para nossos testes. Para criar sua maquina faça conforme vídeo abaixo:
+Iremos criar um CentOS7 com 1VCPU, 3,75GB de RAM e 20GB de disco. Isso é mais do que o suficiente para nossos testes. Para criar sua maquina faça conforme vídeo abaixo (Clique na imagem para ver):
 
 [![](https://i9.ytimg.com/vi/3PldhJq3ANc/mqdefault.jpg?time=1585525451897&sqp=CNDjhPQF&rs=AOn4CLDq_TrcgkqGVXNtbXDF8BjRmyXQpQ)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
 
@@ -84,5 +84,5 @@ Podemos acompanhar os logs de inicialização de cada serviço com o comando aba
 ```
 sudo docker-compose logs -f
 ```
-Caso haja alguma duvida, segue o link do vídeo com toda essa implantação passo a passo.
-[![](https://github.com/AnselmoBorges/zeroahero/blob/master/Slide1%202.jpg)](https://youtu.be/aV1euh4B4XE "Instalação do Elasticsearch e Kibana via Docker")
+Caso haja alguma duvida, segue o link do vídeo com toda essa implantação passo a passo. Clique na imagem!
+[![](https://i9.ytimg.com/vi/aV1euh4B4XE/mqdefault.jpg?time=1585531117773&sqp=CJSQhfQF&rs=AOn4CLB-MuFpMBH7KnXFGoqIgYFBR-BlBw)](https://youtu.be/aV1euh4B4XE "Instalação do Elasticsearch e Kibana via Docker")
