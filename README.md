@@ -1,4 +1,4 @@
-# Workshop Elastic - Zero a Hero (Dia 1)
+# Workshop Elastic - Zero to Hero (Dia 1)
 * **Criado por:** Anselmo Borges<br>
 * **Última atualização:** 29.03.2020
 
