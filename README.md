@@ -94,4 +94,4 @@ O Cluster já vem como todas as ferramentas da versão licenciada, como Machine 
 
 No vídeo abaixo eu explico como criar a conta trial e subir um cluster básico na infra Elastic Cloud. (Clique na imagem para abrir!)
 
-[![](https://i9.ytimg.com/vi/m-aLIWEZyvU/mqdefault.jpg?time=1585535473390&sqp=CKizhfQF&rs=AOn4CLAjcYIo9NpWy5i96bvVrjND8TEMIQ)](https://youtu.be/m-aLIWEZyvU "Criação de um cluster na Elastic Cloud")
+[![](https://i9.ytimg.com/vi/m-aLIWEZyvU/mqdefault.jpg?time=1585585637164&sqp=CNy6iPQF&rs=AOn4CLANqijSRWg8q5tYIDmmLH6-wHKFjg)](https://youtu.be/m-aLIWEZyvU "Criação de um cluster na Elastic Cloud")
