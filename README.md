@@ -86,3 +86,12 @@ sudo docker-compose logs -f
 ```
 Caso haja alguma duvida, segue o link do vídeo com toda essa implantação passo a passo. Clique na imagem!
 [![](https://i9.ytimg.com/vi/aV1euh4B4XE/mqdefault.jpg?time=1585531117773&sqp=CJSQhfQF&rs=AOn4CLB-MuFpMBH7KnXFGoqIgYFBR-BlBw)](https://youtu.be/aV1euh4B4XE "Instalação do Elasticsearch e Kibana via Docker")
+
+## Criação de Cluster no Elastic Cloud:
+Uma outra opção, simples, rápida e eficiente é subir o seu Cluster no ambiente Elastic Cloud, que já vem configurado da maneira adequada, ajustavel de acordo com a sua necessidade, trabalha na infra cloud de sua preferencia (Amazon AWS, Google GCP e Microsoft Azure), e tem um trial de 14 dias sem necessidade de cartão de crédito, somente a conta de email.
+
+O Cluster já vem como todas as ferramentas da versão licenciada, como Machine Learning, Grafos, Watcher e outras além de já vir com TLS e Autenticação ativada, ou seja, você chega a ganhar alguns dias de implantação no que diz respeito a velocidade.
+
+No vídeo abaixo eu explico como criar a conta trial e subir um cluster básico na infra Elastic Cloud. (Clique na imagem para abrir!)
+
+[![](https://i9.ytimg.com/vi/m-aLIWEZyvU/mqdefault.jpg?time=1585535473390&sqp=CKizhfQF&rs=AOn4CLAjcYIo9NpWy5i96bvVrjND8TEMIQ)](https://youtu.be/m-aLIWEZyvU "Criação de um cluster na Elastic Cloud")
