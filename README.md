@@ -51,11 +51,10 @@ docker-compose -version
 ## Docker compose
 É um arquivo yml que vem com as configurações necessárias para subirmos esses dados em Docker para iniciarmos os trabalhos. Maiores detalhes sobre o conteudo dele, basta ver o vídeo abaixo.
 
-[![](http://img.youtube.com/vi/sKnrKFVlDQQ/0.jpg)](http://www.youtube.com/watch?v=sKnrKFVlDQQ "Criação de ambiente do LAB")
-
+## Baixando esse repositório via Git:
 Para baixar o repositorio com o compose digite o comando abaixo:
 ```
-git clone https://github.com/AnselmoBorges/zertoahero.git
+git clone https://github.com/AnselmoBorges/zerotohero.git
 ```
 Entre dentro do diretório baixado:
 ```
