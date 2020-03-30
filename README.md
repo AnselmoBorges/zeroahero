@@ -52,7 +52,7 @@ docker-compose -version
 
 Para baixar o repositorio com o compose digite o comando abaixo:
 ```
-git clone https://github.com/AnselmoBorges/lab_nifi_elastic.git
+git clone https://github.com/AnselmoBorges/zeroahero.git
 ```
 Entre dentro do diretório baixado:
 ```
