@@ -280,6 +280,14 @@ output {
 
 }
 ```
+**Iniciar o serviço sem parâmetro**
+```
+bin/logstash
+```
 
+**Para validar, acesse a console do Kibana e ir em Dev Tools e rodar o comando GET abaixo:**
+```
+GET logstash-movies/_search
+```
 **Validando via API o resultado**
 ![](resultadofinaldia04.JPG)
