@@ -12,11 +12,11 @@ Fala pessoal! Sejam muito bem vindos ao nosso Dia 04 de Workshop de Zero to Hero
 ## Instalando o Logstash no Servidor local
 **Baixar o pacote do logstash**
 ```
-curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-x86_64.rpm
+curl -L -O https://artifacts.elastic.co/downloads/logstash/logstash-7.6.2.rpm
 sudo rpm -vi logstash-7.6.1-x86.64.rpm
 ```
 
-##Primeiro laboratorio, como funciona o Grok Debugger!
+## Primeiro laboratorio, como funciona o Grok Debugger!
 
 **Criando o primeiro pipeline**
 ```
@@ -30,9 +30,7 @@ sudo rpm -vi logstash-7.6.1-x86.64.rpm
 ```
 ```
 
-##Segundo laboratorio, consumindo um dataset de filmes json (arquivo de configuração disponivel no github)
-```
-```
+## Segundo laboratorio, consumindo um dataset de filmes json (arquivo de configuração disponivel no github)
 
 **Primeiro Stdout de Teste**
 ```
