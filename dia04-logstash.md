@@ -29,7 +29,7 @@ curl -L -O https://artifacts.elastic.co/downloads/logstash/logstash-7.6.2.rpm
 sudo rpm -vi logstash-7.6.1-x86.64.rpm
 ```
 
-**Um pouco de teoria**
+### Um pouco de teoria
 Logstash é uma aplicação java que faz um papel de um ETL (Extract, transform, load) na Stack. O mesmo tem um grande potencial de tratar grandes volumes de dados de diferentes origens. Cada processo dentro do logstash é chamado de _pipeline_.
 
 Dentro de cada _pipeline_ teremos um arquivo de configuração que será associado que pode ser divido em 3 seções, sendo elas **Input, Filter e Output**, de maneira bem intuitiva carrega os dados de alguma fonte, processa (ou não) esses dados e por final "despeja" em algum datasource.
