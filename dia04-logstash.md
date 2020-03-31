@@ -73,7 +73,6 @@ vim pipelines/meupipeline.conf
 
 **Conteudo do arquivo meupipeline.conf**
 ```
-
 input {
 
   file {
@@ -113,7 +112,7 @@ bin/logstash -f pipelines/meupipeline.conf
 }
 ```
 
-## Utilizando o Grok Debugger para processar dados não estruturados**
+## Utilizando o Grok Debugger para processar dados não estruturados
 Antes de começarmos vale lembrar que o Grok Debugger é um plugin de filtro que possibilita que transformemos um log despadronizado em um documento no formato json que pode ser indexado e futuramente buscado em campos no Elasticsearch.
 
 **Acessar a console do Kibana > Dev Tools > Grok Debugger**
@@ -140,7 +139,7 @@ Antes de começarmos vale lembrar que o Grok Debugger é um plugin de filtro que
 ```
 vim pipelines/meupipeline.conf
 ```
-**Arquivo final do laboratorio de GROK**
+**Arquivo final (meupipeline.conf) do laboratorio de GROK**
 ```
 input {
 
@@ -170,8 +169,15 @@ output {
 }
 ```
 
+
+
 **Obs: Melhores práticas de uso de pipelines**
+
+Para melhor utilização de recursos e termos também a possibilidade de iniciarmos varios pipelines sem necessariamente iniciarmos varios processos, é recomendado que seja utilizado o arquivo config/pipelines.yml para declarar quais pipelines você utilizará naquela instância de logstash.
+
+O arquivo é lido automaticamente quando não é passado nenhum parâmetro como o '-f' com referências a arquivos de configuração.
 ```
+cat config/pipelines.yml  
 ```
 
 ## Segundo laboratorio, consumindo um dataset de filmes json (arquivo de configuração disponivel no github)
