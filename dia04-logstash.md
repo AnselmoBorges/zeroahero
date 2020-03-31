@@ -16,7 +16,7 @@ curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.
 sudo rpm -vi logstash-7.6.1-x86.64.rpm
 ```
 
-##Primeiro laboratorio, como funciona o Grok Debugger!##
+##Primeiro laboratorio, como funciona o Grok Debugger!
 **Criando o primeiro pipeline**
 ```
 ```
@@ -29,7 +29,7 @@ sudo rpm -vi logstash-7.6.1-x86.64.rpm
 ```
 ```
 
-**Segundo laboratorio, consumindo um dataset de filmes json (arquivo de configuração disponivel no github)**
+##Segundo laboratorio, consumindo um dataset de filmes json (arquivo de configuração disponivel no github)
 ```
 ```
 
