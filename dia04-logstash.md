@@ -68,7 +68,7 @@ echo "[2020–04–09] INFO MensagemdoLOG: You Know for Search" > exemplo.log
 **Criando o primeiro pipeline**
 ```
 mkdir pipelines
-vim pipelines/meupipeline.conf
+vi pipelines/meupipeline.conf
 ```
 
 **Conteudo do arquivo meupipeline.conf**
@@ -137,7 +137,7 @@ Antes de começarmos vale lembrar que o Grok Debugger é um plugin de filtro que
 ```
 **Vamos implementar em nosso pipeline** 
 ```
-vim pipelines/meupipeline.conf
+vi pipelines/meupipeline.conf
 ```
 **Arquivo final (meupipeline.conf) do laboratorio de GROK**
 ```
@@ -168,9 +168,6 @@ output {
   }
 }
 ```
-
-
-
 **Obs: Melhores práticas de uso de pipelines**
 
 Para melhor utilização de recursos e termos também a possibilidade de iniciarmos varios pipelines sem necessariamente iniciarmos varios processos, é recomendado que seja utilizado o arquivo config/pipelines.yml para declarar quais pipelines você utilizará naquela instância de logstash.
@@ -180,14 +177,74 @@ O arquivo é lido automaticamente quando não é passado nenhum parâmetro como 
 cat config/pipelines.yml  
 ```
 
-## Segundo laboratorio, consumindo um dataset de filmes json (arquivo de configuração disponivel no github)
+# Segundo laboratorio, consumindo um dataset de filmes json (arquivo de configuração disponivel no github)
 
-**Primeiro Stdout de Teste**
+## Realizando configurações iniciais
+**Copiar o arquivo movies.json para a home do logstash (pode ser feito através do gitclone do repositorio do workshop)**
 ```
+cd ~
+git clone https://github.com/techlipe/Workshop-Zero-To-Hero.git
+cp Workshop-Zero-To-Hero/dataset/movies.json logstash-7.6.2/ 
 ```
+
+**Para validar, o resultado deve ser igual o abaixo**
+```
+head -1 logstash-7.6.2/movies.json 
+{"Title":"The Land Girls","US_Gross":146083,"Worldwide_Gross":146083,"US_DVD_Sales":null,"Production_Budget":8000000,"Release_Date":"Jun 12 1998","MPAA_Rating":"R","Running_Time_min":null,"Distributor":"Gramercy","Source":null,"Major_Genre":null,"Creative_Type":null,"Director":null,"Rotten_Tomatoes_Rating":null,"IMDB_Rating":6.1,"IMDB_Votes":1071}
+```
+**Implementando a primeira versão do pipeline**
+```
+cd logstash-7.6.2
+vi pipelines/movies.conf
+```
+**primeira versão do movies.conf**
+```
+input {
+
+  file {
+     path => "${PWD}/movies.json"
+     sincedb_path => "/dev/null"
+     start_position => "beginning"
+  }
+
+}
+
+
+filter {
+
+   json {
+     source => "message"
+   }
+
+}
+
+
+output {
+
+stdout {}
+
+}
+```
+Obs: Os plugin novo utilizado é o **json** que é responsavel por interpretar um determinado campo e fazer o split supondo que o conteúdo desse campo é um json.
+
+**Alterando pipelines.yml e iniciando o primeiro teste**
+```
+vi config/pipelines.yml
+```
+**Adicionar o seguinte conteúdo em pipelines.yml**
+```
+- pipeline.id: movies
+  path.config: "${PWD}/pipelines/movies.conf"
+```
+**Iniciar o serviço sem parâmetro**
+```
+bin/logstash
+```
+Observação: Reparar que o campo timestamp está com o valor padrão (horário que o logstash gerou o evento)
 
 **Implementando o Plugin Date e indexando no Elasticsearch**
 ```
+
 ```
 
 **Validando via API o resultado**
