@@ -17,6 +17,7 @@ sudo rpm -vi logstash-7.6.1-x86.64.rpm
 ```
 
 ##Primeiro laboratorio, como funciona o Grok Debugger!
+
 **Criando o primeiro pipeline**
 ```
 ```
