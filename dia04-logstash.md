@@ -69,6 +69,10 @@ echo "[2020–04–09] INFO MensagemdoLOG: You Know for Search" > exemplo.log
 ```
 mkdir pipelines
 vim pipelines/meupipeline.conf
+```
+
+**Conteudo do arquivo meupipeline.conf**
+```
 
 input {
 
@@ -90,6 +94,7 @@ output {
   stdout {}
 }
 ```
+
 Observações: Plugins utilizados file (input) que busca informações em um arquivo e é controlado pelo ponteiro no sincedb_path, e stdout (output) um simples print de como foi processado o arquivo lido.
 
 **Inicializar o Serviço passando o arquivo de configuração por parâmetro**
@@ -97,8 +102,72 @@ Observações: Plugins utilizados file (input) que busca informações em um arq
 bin/logstash -f pipelines/meupipeline.conf
 ```
 
-**Utilizando o Grok Debugger para processar dados não estruturados**
+**Resultado Esperado!**
 ```
+{
+    "@timestamp" => 2020-03-31T20:57:26.549Z,
+       "message" => "[2020–04–09] INFO MensagemdoLOG: You Know for Search",
+          "host" => "qroz-01",
+          "path" => "logstash-7.6.2/exemplo.log",
+      "@version" => "1"
+}
+```
+
+## Utilizando o Grok Debugger para processar dados não estruturados**
+Antes de começarmos vale lembrar que o Grok Debugger é um plugin de filtro que possibilita que transformemos um log despadronizado em um documento no formato json que pode ser indexado e futuramente buscado em campos no Elasticsearch.
+
+**Acessar a console do Kibana > Dev Tools > Grok Debugger**
+```
+
+```
+**Em sample data colocar o trecho abaixo:**
+```
+[2020–04–09] INFO MensagemdoLOG: You Know for Search
+```
+**O pattern que utilizamos foi:**
+```
+\[%{DATA:timestamp}\] %{WORD:loglevel} MensagemdoLOG\: %{GREEDYDATA:logmessage}
+```
+**Resultado esperado:**
+```
+{
+  "loglevel": "INFO",
+  "logmessage": "You Know for Search",
+  "timestamp": "2020–04–09"
+}
+```
+**Vamos implementar em nosso pipeline** 
+```
+vim pipelines/meupipeline.conf
+```
+**Arquivo final do laboratorio de GROK**
+```
+input {
+
+  file {
+     path => "${PWD}/exemplo.log"
+     start_position => "beginning"
+     sincedb_path => "/dev/null"
+   }
+
+}
+
+filter {
+  grok {
+        match => {
+          "message" => "\[%{DATA:timestamp}\] %{WORD:loglevel} MensagemdoLOG\: %{GREEDYDATA:logmessage}"
+        }
+      }
+}
+
+
+output {
+  stdout {}
+  elasticsearch  {
+     hosts => ["http://localhost:9200"]
+     index => "grokando"
+  }
+}
 ```
 
 **Obs: Melhores práticas de uso de pipelines**
