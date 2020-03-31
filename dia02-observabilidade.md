@@ -6,20 +6,23 @@
 
 ![slide](https://github.com/AnselmoBorges/zerotohero/blob/master/Slide1.jpg)
 
+Fala pessoal! Sejam muito bem vindos ao nosso Dia 02 de Workshop de Zero to Hero com toda a Elastic Stack. Hoje vimos como funciona o conceito de observabilidade e como consumir métricas e logs de algumas aplicações como Apache Web Server e as métricas do próprio docker que está rodando nossos serviços. Além também de implementarmos uma solução para visualizarmos um pouco como funciona o Elastic APM.
+
+
 ## Configurando o Metricbeat para monitorar os containeres
-Baixar o pacote do metricbeat
+**Baixar o pacote do metricbeat**
 ```
 curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-darwin-x86_64.tar.gz
 tar xzvf metricbeat-7.6.1-darwin-x86_64.tar.gz
 cd metricbeat-7.6.1-darwin-x86_64/
 ```
 
-Habilitar modulos do metricbeat
+**Habilitar modulos do metricbeat**
 ```
 ./metricbeat modules enable docker
 ```
 
-Subir os templates de Dashboard pro Kibana e Inicializar o Serviço
+**Subir os templates de Dashboard pro Kibana e Inicializar o Serviço**
 ```
 ./metricbeat setup
 ./metricbeat -e
