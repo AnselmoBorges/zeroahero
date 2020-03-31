@@ -12,20 +12,19 @@ Fala pessoal! Sejam muito bem vindos ao nosso Dia 02 de Workshop de Zero to Hero
 ## Configurando o Metricbeat para monitorar os containeres
 **Baixar o pacote do metricbeat**
 ```
-curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-darwin-x86_64.tar.gz
-tar xzvf metricbeat-7.6.1-darwin-x86_64.tar.gz
-cd metricbeat-7.6.1-darwin-x86_64/
+curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-x86_64.rpm
+sudo rpm -vi metricbeat-7.6.1-x86_64.rpm
 ```
 
-**Habilitar modulos do metricbeat**
+**Habilitar modulos docker no Metricbeat**
 ```
-./metricbeat modules enable docker
+sudo metricbeat modules enable docker
 ```
 
 **Subir os templates de Dashboard pro Kibana e Inicializar o Serviço**
 ```
-./metricbeat setup
-./metricbeat -e
+sudo metricbeat setup
+sudo service metricbeat start
 ```
 
 ## Instalando HTTPD e Monitorando métricas e logs do Apache
@@ -50,6 +49,16 @@ sudo vim /etc/httpd/conf/httpd.conf
 **Graceful no Serviço do Apache**
 ```
 service httpd graceful
+```
+
+**Habilitando Modulo do Apache no Metricbeat**
+```
+sudo metricbeat modules enable httpd
+```
+
+**Reiniciar Serviço do Metricbeat**
+```
+sudo metricbeat restart
 ```
 
 ## Implementando APM na sua Aplicação!
