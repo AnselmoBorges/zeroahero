@@ -10,13 +10,34 @@ Fala pessoal! Sejam muito bem vindos ao nosso Dia 04 de Workshop de Zero to Hero
 
 
 ## Instalando o Logstash no Servidor local
-**Baixar o pacote do logstash**
+**Instalar o Java no SO**
+```
+sudo yum install java -y
+```
+
+**Validar instalação do Java**
+```
+java -version
+openjdk version "1.8.0_242"
+OpenJDK Runtime Environment (build 1.8.0_242-b08)
+OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode
+```
+
+**Baixar e instalar o pacote do logstash**
 ```
 curl -L -O https://artifacts.elastic.co/downloads/logstash/logstash-7.6.2.rpm
 sudo rpm -vi logstash-7.6.1-x86.64.rpm
 ```
 
-## Primeiro laboratorio, como funciona o Grok Debugger!
+**Um pouco de teoria**
+Logstash é uma aplicação java que faz um papel de um ETL (Extract, transform, load) na Stack. O mesmo tem um grande potencial de tratar grandes volumes de dados de diferentes origens. Cada processo dentro do logstash é chamado de _pipeline_.
+
+Dentro de cada _pipeline_ teremos um arquivo de configuração que será associado que pode ser divido em 3 seções, sendo elas **Input, Filter e Output**, de maneira bem intuitiva carrega os dados de alguma fonte, processa (ou não) esses dados e por final "despeja" em algum datasource.
+
+Em cada uma de suas seções temos uma grande variedade de plugins disponíveis que possibilitam conexões em bancos relacionais, brokers, aplicações REST e transformação desses dados de várias formas.
+
+
+## Primeiro laboratorio, como funciona o plugin de filtro Grok Debugger!
 
 **Criando o primeiro pipeline**
 ```
