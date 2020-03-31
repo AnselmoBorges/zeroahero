@@ -4,7 +4,7 @@
 * **Criado por:** Felipe Queiroz e Anselmo Borges <br>
 * **Última atualização:** 30.03.2020
 
-[![](https://github.com/AnselmoBorges/zerotohero/blob/master/Slide1.jpg)]
+[!(https://github.com/AnselmoBorges/zerotohero/blob/master/Slide1.jpg)]
 
 ## Configurando o Metricbeat para monitorar os containeres
 
