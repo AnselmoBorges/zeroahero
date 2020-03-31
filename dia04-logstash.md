@@ -244,10 +244,42 @@ Observação: Reparar que o campo timestamp está com o valor padrão (horário 
 
 **Implementando o Plugin Date e indexando no Elasticsearch**
 ```
+input {
 
+  file {
+     path => "${PWD}/movies.json"
+     sincedb_path => "/dev/null"
+     start_position => "beginning"
+  }
+
+}
+
+
+filter {
+
+   json {
+     source => "message"
+   }
+
+   date {
+     match => [ "Release_date" , "MMM dd yyyy" ]
+     target => "@timestamp"
+
+   }
+}
+
+
+output {
+
+#stdout {}
+
+ elasticsearch {
+
+     index => "logstash-movies"
+  }
+
+}
 ```
 
 **Validando via API o resultado**
-```
-```
-
+![](resultadofinaldia04.JPG)
