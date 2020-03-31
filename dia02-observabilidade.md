@@ -29,5 +29,27 @@ cd metricbeat-7.6.1-darwin-x86_64/
 ```
 
 ## Instalando HTTPD e Monitorando métricas e logs do Apache
+**Instalando o Apache (HTTPD) e Verificando o Monitoramento Padrão http://seuipexterno/server-status**
+```
+sudo yum install httpd -y 
+```
+**Inicializando o Serviço do Apache**
+```
+sudo service httpd start
+```
+
+**(CURIOSIDADE) server-status do Apache - Adicionar no arquivo httpd.conf o seguinte trecho**
+```
+sudo vim /etc/httpd/conf/httpd.conf
+
+<Location /server-status>
+    SetHandler server-status
+    Allow from SEUIP
+</Location>
+```
+**Graceful no Serviço do Apache**
+```
+service httpd graceful
+```
 
 ## Implementando APM na sua Aplicação!
