@@ -1,7 +1,7 @@
 | [Home](https://techlipe.github.io/Workshop-Zero-To-Hero) | [Dia 01](https://techlipe.github.io/Workshop-Zero-To-Hero/dia01-configuracoes) | [Dia 02](https://techlipe.github.io/Workshop-Zero-To-Hero/dia02-observabilidade) | [Dia 03](https://techlipe.github.io/Workshop-Zero-To-Hero/dia03-elasticsearch) | [Dia 04](https://techlipe.github.io/Workshop-Zero-To-Hero/dia04-logstash) | [Dia 05](https://techlipe.github.io/Workshop-Zero-To-Hero/dia05-kibana) | 
 
 # Workshop Elastic - Zero to Hero (Dia 4)
-* **Criado por:** Felipe Queiroz e Anselmo Borges <br>
+* **Criado por:** Felipe Queiroz <br>
 * **Última atualização:** 31.03.2020
 
 ![slide](https://github.com/AnselmoBorges/zerotohero/blob/master/Slide1.jpg)
@@ -56,6 +56,8 @@ Logstash é uma aplicação java que faz um papel de um ETL (Extract, transform,
 Dentro de cada _pipeline_ teremos um arquivo de configuração que será associado que pode ser divido em 3 seções, sendo elas **Input, Filter e Output**, de maneira bem intuitiva carrega os dados de alguma fonte, processa (ou não) esses dados e por final "despeja" em algum datasource.
 
 Em cada uma de suas seções temos uma grande variedade de plugins disponíveis que possibilitam conexões em bancos relacionais, brokers, aplicações REST e transformação desses dados de várias formas.
+
+![](oqueelogstash.jpg)
 
 
 ## Primeiro laboratorio, como funciona o plugin de filtro Grok Debugger!
@@ -116,9 +118,7 @@ bin/logstash -f pipelines/meupipeline.conf
 Antes de começarmos vale lembrar que o Grok Debugger é um plugin de filtro que possibilita que transformemos um log despadronizado em um documento no formato json que pode ser indexado e futuramente buscado em campos no Elasticsearch.
 
 **Acessar a console do Kibana > Dev Tools > Grok Debugger**
-```
-
-```
+![](grokdebuggerdevtools.JPG)
 **Em sample data colocar o trecho abaixo:**
 ```
 [2020–04–09] INFO MensagemdoLOG: You Know for Search
