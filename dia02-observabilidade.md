@@ -61,4 +61,27 @@ sudo metricbeat modules enable httpd
 sudo metricbeat restart
 ```
 
-## Implementando APM na sua Aplicação!
+## Laboratório de APM
+**Clonar o repositorio do .git da aplicação modelo para a home do seu usuário**
+```
+cd ~
+git clone https://github.com/techlipe/cm.git
+```
+
+**Instalar o pacote npm e as dependências da aplicação**
+```
+sudo yum install npm -y
+
+```
+Obs: Ao instalar as dependências já estamos instalando o agente do APM da Elastic. O mesmo deve e é referenciado no início da aplicação.
+```
+var apm = require('elastic-apm-node').start({
+    serviceName: 'cm-back',
+
+    secretToken: '',
+
+    serverUrl: 'http://localhost:8200/'
+  });
+```
+
+****
