@@ -93,10 +93,18 @@ curl -L  -O https://artifacts.elastic.co/downloads/apm-server/apm-server-7.6.2-x
 sudo rpm -iv apm-server-7.6.2-x86_64.rpm
 ```
 
-** Iniciar o serviço e aplicação**
+**Iniciar o serviço e aplicação**
 Vamos agora inicializar o APM server com as configurações padrões e também a nossa aplicação NODEJS
 ```
 sudo service apm-server start
 cd cm
 npm start
 ```
+
+**Realizar consultas na aplicação e verificar no menu de APM**
+Realizar consultas e inserções em:
+```
+http://seuip:3000
+```
+
+Acessar o meno de APM na console do Kibana e verificar a nossa aplicação.
