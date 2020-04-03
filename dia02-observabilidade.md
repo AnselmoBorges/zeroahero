@@ -63,18 +63,22 @@ sudo metricbeat restart
 ```
 
 ## Laboratório de APM
+
 **Clonar o repositorio do .git da aplicação modelo para a home do seu usuário**
+
 ```
 cd ~
 git clone https://github.com/techlipe/cm.git
 ```
 
 **Instalar o pacote npm e as dependências da aplicação**
+
 ```
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo yum install nodejs
 npm istall
 ```
+
 Obs: Ao instalar as dependências já estamos instalando o agente do APM da Elastic na aplicaçao. O mesmo deve e é referenciado no início da aplicação. Abaixo o trecho do código para fins didáticos. 
 ```
 var apm = require('elastic-apm-node').start({
@@ -86,7 +90,19 @@ var apm = require('elastic-apm-node').start({
   });
 ```
 
+**Instalar e iniciar o MongoDB via dockercompose**
+```
+cd ~/cm
+sudo docker-compose up -d
+```
+**Validar inicalização do mongodb**
+```
+sudo netstat -anp | grep 27017
+tcp6       0      0 :::27017                :::*                    LISTEN      pid/docker-proxy- 
+```
+
 **Baixar e instalar o APM Server **
+
 ```
 cd ~
 curl -L  -O https://artifacts.elastic.co/downloads/apm-server/apm-server-7.6.2-x86_64.rpm
@@ -94,6 +110,7 @@ sudo rpm -iv apm-server-7.6.2-x86_64.rpm
 ```
 
 **Iniciar o serviço e aplicação**
+
 Vamos agora inicializar o APM server com as configurações padrões e também a nossa aplicação NODEJS
 ```
 sudo service apm-server start
@@ -102,7 +119,9 @@ npm start
 ```
 
 **Realizar consultas na aplicação**
+
 Realizar consultas e inserções em:
+
 ```
 http://seuip:3000
 ```
