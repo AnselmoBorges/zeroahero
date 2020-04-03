@@ -101,10 +101,14 @@ cd cm
 npm start
 ```
 
-**Realizar consultas na aplicação e verificar no menu de APM**
+**Realizar consultas na aplicação**
 Realizar consultas e inserções em:
 ```
 http://seuip:3000
 ```
 
-Acessar o meno de APM na console do Kibana e verificar a nossa aplicação.
+**Acessar o meno de APM na console do Kibana e verificar a nossa aplicação sendo monitorada!**
+Aplicação
+![](apm-menu.JPG)
+Requisições
+![](apm-requisicoes.JPG)
