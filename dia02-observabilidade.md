@@ -95,6 +95,13 @@ var apm = require('elastic-apm-node').start({
 cd ~/cm
 sudo docker-compose up -d
 ```
+
+**[OPCIONAL] Habilitar o modulo do mongodb no metricbeat** 
+```
+sudo metricbeat modules enable mongodb
+sudo service metricbeat restart
+```
+
 **Validar inicalização do mongodb**
 ```
 sudo netstat -anp | grep 27017
