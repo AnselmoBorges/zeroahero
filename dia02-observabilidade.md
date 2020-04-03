@@ -54,7 +54,7 @@ service httpd graceful
 
 **Habilitando Modulo do Apache no Metricbeat**
 ```
-sudo metricbeat modules enable httpd
+sudo metricbeat modules enable apache
 ```
 
 **Reiniciar Serviço do Metricbeat**
