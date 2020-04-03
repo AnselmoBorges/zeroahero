@@ -109,10 +109,10 @@ http://seuip:3000
 
 **Acessar o meno de APM na console do Kibana e verificar a nossa aplicação sendo monitorada!**
 
-Aplicação
+**Overview da Aplicação**
 
 ![](apm-menu.JPG)
 
-**Requisições**
+**Transações**
 
 ![](apm-requisicoes.JPG)
