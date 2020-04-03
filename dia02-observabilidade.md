@@ -102,7 +102,7 @@ var apm = require('elastic-apm-node').start({
   });
 ```
 
-**Instalar e iniciar o MongoDB via dockercompose**
+**Instalar e iniciar o MongoDB via dockercompose (Docker e docker compose foram instalados no lab do dia 01)**
 ```
 cd ~/cm
 sudo docker-compose up -d
@@ -145,7 +145,7 @@ Realizar consultas e inserções em:
 http://seuip:3000
 ```
 
-**Acessar o meno de APM na console do Kibana e verificar a nossa aplicação sendo monitorada!**
+**Acessar o menu de APM na console do Kibana e verificar a nossa aplicação sendo monitorada!**
 
 **Overview da Aplicação**
 
