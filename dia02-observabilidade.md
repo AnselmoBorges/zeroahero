@@ -12,6 +12,7 @@ Fala pessoal! Sejam muito bem vindos ao nosso Dia 02 de Workshop de Zero to Hero
 ## Configurando o Metricbeat para monitorar os containeres
 **Baixar o pacote do metricbeat**
 ```
+cd ~
 curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-x86_64.rpm
 sudo rpm -vi metricbeat-7.6.1-x86_64.rpm
 ```
