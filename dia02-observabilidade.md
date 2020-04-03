@@ -84,7 +84,10 @@ cd ~/cm
 npm install
 ```
 
-Obs: Ao instalar as dependências já estamos instalando o agente do APM da Elastic na aplicaçao através da depndência '"elastic-apm-node": "^3.5.0"'.
+Obs: Ao instalar as dependências já estamos instalando o agente do APM da Elastic na aplicaçao através da depndência abaixo:
+```
+"elastic-apm-node": "^3.5.0"
+```
 
 A inicialização está inserida no arquivo 'index.js' e deve vir antes da inicialização de todos os outros componentes da aplicação (ex: express)
 
