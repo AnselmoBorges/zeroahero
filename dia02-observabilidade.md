@@ -71,15 +71,24 @@ cd ~
 git clone https://github.com/techlipe/cm.git
 ```
 
-**Instalar o pacote npm e as dependências da aplicação**
+**Instalar o pacote NPM e NodeJS no servidor**
 
 ```
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo yum install nodejs
-npm istall
 ```
 
-Obs: Ao instalar as dependências já estamos instalando o agente do APM da Elastic na aplicaçao. O mesmo deve e é referenciado no início da aplicação. Abaixo o trecho do código para fins didáticos. 
+**Instalar as dependências das aplicações**
+```
+cd ~/cm
+npm install
+```
+
+Obs: Ao instalar as dependências já estamos instalando o agente do APM da Elastic na aplicaçao através da depndência '"elastic-apm-node": "^3.5.0"'.
+
+A inicialização está inserida no arquivo 'index.js' e deve vir antes da inicialização de todos os outros componentes da aplicação (ex: express)
+
+Abaixo o trecho do código para fins didáticos. 
 ```
 var apm = require('elastic-apm-node').start({
     serviceName: 'cm-back',
