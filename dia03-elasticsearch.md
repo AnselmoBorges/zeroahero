@@ -13,6 +13,7 @@ Fala pessoal! Sejam muito bem vindos ao nosso Dia 04 de Workshop de Zero to Hero
 **Observação importante: Para seguir esse tutorial acessar Kibana > Dev Tools ;)**
 
 **O que é um Nó e um Cluster Elasticsearch ?**
+
 Nó é uma instância de Elasticsearch no ar, ou seja, quando incializamos o Elasticsearch (independente da maneira) temos um nó iniciado. Já um cluster também iniciado a partir de um nó, porém, um cluster pode ter múltiplos nós dentro deles, ou seja, um cluster também pode ser um agrupapemtno de nós de diversos papéis.
 
 Se realizarmos uma chamada no contexto '/'
@@ -42,15 +43,72 @@ Teremos as informações gerais do nosso cluster, como o exemplo abaixo:
 ```
 
 **Interfaces HTTP e Transport (TCP)**
-O Elasticsearch trabalha com duas camadas de comunicação, uma HTTP REST para atender requisições client-side e outra TCP (Transport) que atende as demandas internas do cluster. Como vimos, a camada HTTP é onde o Kibana consome as informações do Elasticsearch e onde nós trabalharemos no nosso workshop, já a camada de transporte podemos imaginar um seguinte cenário.
 
+O Elasticsearch trabalha com duas camadas de comunicação, uma HTTP REST para atender requisições client-side e outra TCP (Transport) que atende as demandas internas do cluster. Como vimos, a camada HTTP é onde o Kibana consome as informações do Elasticsearch e onde nós trabalharemos no nosso workshop, já a camada de transporte podemos imaginar um seguinte cenário.
 
 ![](https://www.websequencediagrams.com/?png=msc284088041)
 
 ## Indices
 **Definição 1) Mapeamento e Schema-FREE**
+Mapeamento automático ?
+```
+PUT 
+```
+ 
 
 **Definição 2) Documentos**
+
+A diferença entre PUT e POST se dá na geração do 'id' do documento, no primeiro cenário ele insere um numérico sequencial, já no segundo um hash. 
+
+Exemplo PUT
+
+Inserir um documento sem ID não é possível.
+```
+PUT nomes/_doc/
+{
+  "name" : "Felipe Queiroz"
+}
+
+RESULTADO:
+{
+  "error" : "Incorrect HTTP method for uri [/nomes/_doc/?pretty=true] and method [PUT], allowed: [POST]",
+  "status" : 405
+}
+```
+
+Colocando um ID no documento temos um resultado OK:
+
+```
+PUT nomes/_doc/1
+{
+  "name" : "Felipe Queiroz"
+}
+
+RESULTADO:
+{
+  "_index" : "nomes",
+  "_type" : "_doc",
+  "_id" : "1",
+  "_version" : 1,
+  "result" : "created",
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "_seq_no" : 0,
+  "_primary_term" : 1
+}
+```
+
+A inserção com POST sem id ficaria:
+```
+POST nomes/_doc/
+{
+  "name" : "Felipe Queiroz"
+}
+```
+
 
 **Configurações de ìndices**
 
