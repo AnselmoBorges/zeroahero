@@ -199,13 +199,53 @@ POST nomes/_doc/
 }
 ```
 
-Resultado
-```
-
-```
-
 
 **Configurações de ìndices**
+
+```
+GET clientes/_settings
+```
+
+Vamos aumentar o número de replicas
+
+```
+PUT clientes/_settings
+{
+  "number_of_replicas" : 3
+}
+```
+
+Caso quisessemos alterar as configurações do nosso índice 'clientes' desde o ínicio teriamos algo como abaixo:
+```
+PUT clientes/
+{
+  "settings": {
+    "number_of_shards": 2,
+    "number_of_replicas": 2
+  }, 
+  "mappings": {
+    "properties": {
+      "nome" : {
+        "type" : "text",
+        "fields": {
+          "keyword" : {
+            "type" : "keyword"
+          }
+        }
+      },
+      "rua" : {
+        "type" : "keyword"
+      },
+      "numero" : {
+        "type": "integer"
+      },
+      "idade" : {
+        "type" : "integer"
+      }
+    }
+  }
+}
+```
 
 ## API's
 **_cat/**
