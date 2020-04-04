@@ -50,11 +50,97 @@ O Elasticsearch trabalha com duas camadas de comunicação, uma HTTP REST para a
 
 ## Indices
 **Definição 1) Mapeamento e Schema-FREE**
-Mapeamento automático ?
+
+Vamos indexar um documento em um índice chamado 'clientes':
+
 ```
-PUT 
+PUT clientes/_doc/1
+{
+  "nome" :  "Felipe Queiroz",
+  "rua"  : "Av. Brasil",
+  "numero": "345",
+  "idade" : "22"
+} 
+```
+Agora vamos checar qual foi o mapeamento que o Elasticsearch gerou para nosso índice:
+```
+GET clientes/_mapping
 ```
  
+Vamos observar através das buscas as diferenças entre keyword e text:
+```
+GET clientes/_search
+{
+  "query": {
+    "match": {
+      "nome": "Felipe"
+    }
+  }
+}
+
+
+GET clientes/_search
+{
+  "query": {
+    "match": {
+      "nome.keyword": "Felipe"
+    }
+  }
+}
+```
+
+Criando um mapeamento prévio
+```
+DELETE clientes
+
+PUT clientes/
+{
+  "mappings": {
+    "properties": {
+      "nome" : {
+        "type" : "text",
+        "fields": {
+          "keyword" : {
+            "type" : "keyword"
+          }
+        }
+      },
+      "rua" : {
+        "type" : "keyword"
+      },
+      "numero" : {
+        "type": "integer"
+      },
+      "idade" : {
+        "type" : "integer"
+      }
+    }
+  }
+}
+```
+Inserindo o nosso documento novamente:
+```
+PUT clientes/_doc/1
+{
+  "nome" :  "Felipe Queiroz",
+  "rua"  : "Av. Brasil",
+  "numero": "345",
+  "idade" : "22"
+}
+```
+Observando os campos inteiros (que possuem aspas):
+```
+GET clientes/_search
+{
+  "aggs": {
+    "maxidade": {
+      "max": {
+        "field": "idade"
+      }
+    }
+  }
+}
+```
 
 **Definição 2) Documentos**
 
@@ -69,7 +155,10 @@ PUT nomes/_doc/
   "name" : "Felipe Queiroz"
 }
 
-RESULTADO:
+```
+
+Resultado Esperado:
+```
 {
   "error" : "Incorrect HTTP method for uri [/nomes/_doc/?pretty=true] and method [PUT], allowed: [POST]",
   "status" : 405
@@ -102,11 +191,17 @@ RESULTADO:
 ```
 
 A inserção com POST sem id ficaria:
+
 ```
 POST nomes/_doc/
 {
   "name" : "Felipe Queiroz"
 }
+```
+
+Resultado
+```
+
 ```
 
 
