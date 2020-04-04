@@ -2,7 +2,7 @@
 
 # Workshop Elastic - Zero to Hero (Dia 4)
 * **Criado por:** Felipe Queiroz <br>
-* **Última atualização:** 31.03.2020
+* **Última atualização:** 01.04.2020
 
 ![slide](https://github.com/AnselmoBorges/zerotohero/blob/master/Slide1.jpg)
 
