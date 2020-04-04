@@ -45,7 +45,7 @@ Teremos as informações gerais do nosso cluster, como o exemplo abaixo:
 O Elasticsearch trabalha com duas camadas de comunicação, uma HTTP REST para atender requisições client-side e outra TCP (Transport) que atende as demandas internas do cluster. Como vimos, a camada HTTP é onde o Kibana consome as informações do Elasticsearch e onde nós trabalharemos no nosso workshop, já a camada de transporte podemos imaginar um seguinte cenário.
 
 
-![](https://www.websequencediagrams.com/?png=msc866396517)
+![](https://www.websequencediagrams.com/?png=msc284088041)
 
 ## Indices
 **Definição 1) Mapeamento e Schema-FREE**
