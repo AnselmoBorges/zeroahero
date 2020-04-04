@@ -2,7 +2,7 @@
 * **Criado por:** Anselmo Borges<br>
 * **Última atualização:** 29.03.2020
 
-[![](https://github.com/AnselmoBorges/zerotohero/blob/master/Slide1.jpg)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
+[![](https://i9.ytimg.com/vi/3PldhJq3ANc/mqdefault.jpg?time=1586022386084&sqp=CJyPo_QF&rs=AOn4CLDaLHsrscSf8X_ounzIMK1OMLtfzQ)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
 
 Nesse repositório estarão dispostos os arquivos necessários para configuração do ambiente, lembrando que vamos subir esse ambiente usando Google Cloud, o custo do mesmo é de responsabilidade do Aluno, estimo que a utilização do mesmo em umas 3 horas dará menos do que 10 reais, portanto lembre-se de excluir o ambiente depois de utilizado, caso contrário ele será cobrado enquanto ligado.
 
@@ -20,7 +20,7 @@ Acho que o processo de cadastro dura menos de 3 min e você já pode usar.
 ## Configuração do servidor:
 Iremos criar um CentOS7 com 1VCPU, 3,75GB de RAM e 20GB de disco. Isso é mais do que o suficiente para nossos testes. Para criar sua maquina faça conforme vídeo abaixo (Clique na imagem para ver):
 
-[![](https://i9.ytimg.com/vi/3PldhJq3ANc/mqdefault.jpg?time=1585586182675&sqp=CLS_iPQF&rs=AOn4CLCOvGK8fL6Id3vgOVvKLCKVGgmQ0A)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
+[![](https://i9.ytimg.com/vi/aV1euh4B4XE/mqdefault.jpg?time=1586022625587&sqp=CMiRo_QF&rs=AOn4CLBCs3sas1KsyKZJxPETvBfxLuQJpQ)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
 
 ## Pré requisitos no S.O:
 * Docker instalado
@@ -93,4 +93,4 @@ O Cluster já vem como todas as ferramentas da versão licenciada, como Machine 
 
 No vídeo abaixo eu explico como criar a conta trial e subir um cluster básico na infra Elastic Cloud. (Clique na imagem para abrir!)
 
-[![](https://i9.ytimg.com/vi/m-aLIWEZyvU/mqdefault.jpg?time=1585585637164&sqp=CNy6iPQF&rs=AOn4CLANqijSRWg8q5tYIDmmLH6-wHKFjg)](https://youtu.be/m-aLIWEZyvU "Criação de um cluster na Elastic Cloud")
+[![](https://i9.ytimg.com/vi/m-aLIWEZyvU/mqdefault.jpg?time=1586022726430&sqp=CMiRo_QF&rs=AOn4CLA_i-kn-dGXey2E8dXUpcu1EeICfA)](https://youtu.be/m-aLIWEZyvU "Criação de um cluster na Elastic Cloud")
