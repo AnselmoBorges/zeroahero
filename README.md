@@ -99,6 +99,11 @@ No vídeo abaixo eu explico como criar a conta trial e subir um cluster básico 
 Abaixo, mais algumas possibilidades de instalações que podem auxiliar no caso de não conseguirem o acesso ao Google GCP.
 
 ### Instalação do Elasticsearch e Kibana no Windows via MSI.
+Para fazer o download do ElasticSearch para Windows clique no link abaixo:
+https://www.elastic.co/guide/en/elasticsearch/reference/current/windows.html
+
 Nesse vídeo abaixo explico como realizar a instalação do Elasticsearch e Kibana no Windows (O que eu não recomendo, rs).
+
+
 
 
