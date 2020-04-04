@@ -94,3 +94,11 @@ O Cluster já vem como todas as ferramentas da versão licenciada, como Machine 
 No vídeo abaixo eu explico como criar a conta trial e subir um cluster básico na infra Elastic Cloud. (Clique na imagem para abrir!)
 
 [![](https://i9.ytimg.com/vi/m-aLIWEZyvU/mqdefault.jpg?time=1586022726430&sqp=CMiRo_QF&rs=AOn4CLA_i-kn-dGXey2E8dXUpcu1EeICfA)](https://youtu.be/m-aLIWEZyvU "Criação de um cluster na Elastic Cloud")
+
+## Material Adicional:
+Abaixo, mais algumas possibilidades de instalações que podem auxiliar no caso de não conseguirem o acesso ao Google GCP.
+
+### Instalação do Elasticsearch e Kibana no Windows via MSI.
+Nesse vídeo abaixo explico como realizar a instalação do Elasticsearch e Kibana no Windows (O que eu não recomendo, rs).
+
+
