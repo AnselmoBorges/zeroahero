@@ -2,7 +2,7 @@
 * **Criado por:** Anselmo Borges<br>
 * **Última atualização:** 29.03.2020
 
-[![](https://i9.ytimg.com/vi/3PldhJq3ANc/mqdefault.jpg?time=1586022386084&sqp=CJyPo_QF&rs=AOn4CLDaLHsrscSf8X_ounzIMK1OMLtfzQ)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
+[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/installgcp.jpg)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
 
 Nesse repositório estarão dispostos os arquivos necessários para configuração do ambiente, lembrando que vamos subir esse ambiente usando Google Cloud, o custo do mesmo é de responsabilidade do Aluno, estimo que a utilização do mesmo em umas 3 horas dará menos do que 10 reais, portanto lembre-se de excluir o ambiente depois de utilizado, caso contrário ele será cobrado enquanto ligado.
 
