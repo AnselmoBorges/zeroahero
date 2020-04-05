@@ -180,6 +180,109 @@ cat config/pipelines.yml
 # Segundo laboratorio, consumindo um dataset de filmes json (arquivo de configuração disponivel no github)
 
 ## Realizando configurações iniciais
+
+**Indexar mapeamento do nosso índice final no Kibana > Dev Tools**
+```
+PUT logstash-movies/
+{
+  "mappings": {
+    "properties": {
+  "adult": {
+    "type": "keyword"
+  },
+  "belongs_to_collection": {
+    "type": "text"
+  },
+  "budget": {
+    "type": "long"
+  },
+  "genres": {
+    "type": "keyword"
+  },
+  "homepage": {
+    "type": "keyword"
+  },
+  "id": {
+    "type": "long"
+  },
+  "imdb_id": {
+    "type": "keyword"
+  },
+  "original_language": {
+    "type": "keyword"
+  },
+  "original_title": {
+    "type": "keyword"
+  },
+  "overview": {
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
+  },
+  "popularity": {
+    "type": "double"
+  },
+  "poster_path": {
+    "type": "keyword"
+  },
+  "production_companies": {
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
+  },
+  "production_countries": {
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
+  },
+  "release_date": {
+    "type": "keyword"
+  },
+  "revenue": {
+    "type": "long"
+  },
+  "runtime": {
+    "type": "long"
+  },
+  "spoken_languages": {
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
+  },
+  "status": {
+    "type": "keyword"
+  },
+  "tagline": {
+    "type": "keyword"
+  },
+  "title": {
+    "type": "keyword"
+  },
+  "video": {
+    "type": "boolean"
+  },
+  "vote_average": {
+    "type": "double"
+  },
+  "vote_count": {
+    "type": "long"
+  }
+}
+    }
+  }
+```
 **Copiar o arquivo movies.json para a home do logstash (pode ser feito através do gitclone do repositorio do workshop)**
 ```
 cd ~
