@@ -197,10 +197,20 @@ PUT logstash-movies/
     "type": "long"
   },
   "genres": {
-    "type": "keyword"
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
   },
   "homepage": {
-    "type": "keyword"
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
   },
   "id": {
     "type": "long"
@@ -209,10 +219,20 @@ PUT logstash-movies/
     "type": "keyword"
   },
   "original_language": {
-    "type": "keyword"
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
   },
   "original_title": {
-    "type": "keyword"
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
   },
   "overview": {
     "type": "text",
@@ -245,7 +265,8 @@ PUT logstash-movies/
     }
   },
   "release_date": {
-    "type": "keyword"
+    "type": "date",
+    "format": ["yyyy-MM-dd"]
   },
   "revenue": {
     "type": "long"
@@ -262,13 +283,28 @@ PUT logstash-movies/
     }
   },
   "status": {
-    "type": "keyword"
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
   },
   "tagline": {
-    "type": "keyword"
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
   },
   "title": {
-    "type": "keyword"
+    "type": "text",
+    "fields" : {
+      "keyword" : {
+        "type" : "keyword"
+      }
+    }
   },
   "video": {
     "type": "boolean"
