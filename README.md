@@ -2,7 +2,7 @@
 * **Criado por:** Anselmo Borges<br>
 * **Última atualização:** 29.03.2020
 
-[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/Slide1.jpg)
+[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/Slide1.jpg)]
 
 Nesse repositório estarão dispostos os arquivos necessários para configuração do ambiente, lembrando que vamos subir esse ambiente usando Google Cloud, o custo do mesmo é de responsabilidade do Aluno, estimo que a utilização do mesmo em umas 3 horas dará menos do que 10 reais, portanto lembre-se de excluir o ambiente depois de utilizado, caso contrário ele será cobrado enquanto ligado.
 
