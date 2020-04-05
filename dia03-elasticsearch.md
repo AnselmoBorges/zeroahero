@@ -248,12 +248,103 @@ PUT clientes/
 ```
 
 ## API's
-**_cat/**
+** cat API**
 
-**_cluster/health**
+Essa API tem a função de apresentar alguma informação de maneira mais "human-readable" possível.
 
-**_bulk/**
+Exemplos:
+Nós dentro do cluster:
+```
+GET _cat/nodes?v
+```
+Alocação de shards:
+```
+GET _cat/allocation
+```
+Tarefas executando no cluster:
+```
+GET _cat/tasks
+```
 
+** cluster/health**
+
+Responsável por apresentar com detalhes a saúde atual do cluster.
+
+```
+GET _cluster/health
+```
+
+Obs: 
+Saúde Yellow = Existem shards replicas que não foram indexadas.
+Saúde Red = Existem shards primárias que não foram indexadas
+
+Para conferir os impedimentos de alocação use a API abaixo:
+
+```
+GET _cluster/allocation/explain
+```
+
+** bulk/**
+
+Para não gastarmos recursos computacionais indexando documentos 1 a 1, podemos utilizar a API de bulk para indexar vários documentos de uma única vez.
+
+Exemplo:
+```
+POST _bulk
+{ "index" : { "_index" : "clientes", "_id" : "1" } }
+{ "nome" : "Felipe Queiroz" }
+{ "create" : { "_index" : "clientes", "_id" : "2" } }
+{ "nome" : "Anselmo Borges" }
+{ "create" : { "_index" : "clientes", "_id" : "3" } }
+{ "nome" : "Priscilla Parodi" }
+```
 
 ## Breve Apresentação a Buscas
+
+Antes de iniciarmos, "bulkar" os documentos abaixo para fazermos experimentos com as buscas.
+
+```
+POST _bulk
+{ "index" : { "_index" : "clientes_buscas", "_id" : "1" } }
+{ "nome" : "Antonio" , "idade" : 20}
+{ "create" : { "_index" : "clientes_buscas", "_id" : "2" } }
+{ "nome" : "Guilherme" , "idade" : 40}
+{ "create" : { "_index" : "clientes_buscas", "_id" : "3" } }
+{ "nome" : "Gabriel" , "idade" : 24}
+{ "create" : { "_index" : "clientes_buscas", "_id" : "4" } }
+{ "nome" : "Bruna" , "idade" : 32}
+{ "create" : { "_index" : "clientes_buscas", "_id" : "5" } }
+{ "nome" : "Daniela", "idade": 19 }
+{ "create" : { "_index" : "clientes_buscas", "_id" : "6" } }
+{ "nome" : "Guilherme" , "idade" : 23}
+```
+
+Vamos buscar os documentos que possuem o campo 'nome' o valor 'Guilherme':
+
+```
+GET clientes_buscas/_search
+{
+  "query": {
+    "match": {
+      "nome": "Guilherme"
+    }
+  }
+}
+```
+
+Agora vamos buscar por clientes que estão na faixa de idade entre 20 e 29 anos.
+
+```
+GET clientes_buscas/_search
+{
+  "query": {
+    "range": {
+      "idade": {
+        "gte": 20,
+        "lte": 29
+      }
+    }
+  }
+}
+```
 
