@@ -98,12 +98,22 @@ No vídeo abaixo eu explico como criar a conta trial e subir um cluster básico 
 ## Material Adicional:
 Abaixo, mais algumas possibilidades de instalações que podem auxiliar no caso de não conseguirem o acesso ao Google GCP.
 
-### Instalação do Elasticsearch e Kibana no Windows via MSI.
+### Instalação do Elasticsearch e Kibana no Windows:
 Para fazer o download do ElasticSearch para Windows clique no link abaixo:
 https://www.elastic.co/guide/en/elasticsearch/reference/current/windows.html
 
 Nesse vídeo abaixo explico como realizar a instalação do Elasticsearch e Kibana no Windows (O que eu não recomendo, rs).
+link do video
 
+## Instalação do Docker e Git no Windows:
+Pra que não conseguir criar uma conta no Google Cloud, uma opção é realizar a instalação via Docker no Windows, lembrando que o recomendado para melhor acompanhamento dos dias de treinamento é fazer no Google Cloud.
+
+Segue abaixo os links de cada um dos Downloads:
+* Docker para Windows - https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe
+* Git - https://github.com/git-for-windows/git/releases/download/v2.26.0.windows.1/Git-2.26.0-64-bit.exe
+
+Segue um vídeo que auxilia na execução do nosso laboratório nesse cenário:
+Link do vídeo
 
 
 
