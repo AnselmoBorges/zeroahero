@@ -102,6 +102,9 @@ Abaixo, mais algumas possibilidades de instalações que podem auxiliar no caso 
 Para fazer o download do ElasticSearch para Windows clique no link abaixo:
 https://www.elastic.co/guide/en/elasticsearch/reference/current/windows.html
 
+Para fazer o Download do Kibana, segue o link abaixo para o Download:
+https://artifacts.elastic.co/downloads/kibana/kibana-7.6.2-windows-x86_64.zip
+
 Nesse vídeo abaixo explico como realizar a instalação do Elasticsearch e Kibana no Windows (O que eu não recomendo, rs).
 link do video
 
