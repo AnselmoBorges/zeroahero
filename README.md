@@ -107,6 +107,7 @@ https://artifacts.elastic.co/downloads/kibana/kibana-7.6.2-windows-x86_64.zip
 
 Nesse vídeo abaixo explico como realizar a instalação do Elasticsearch e Kibana no Windows (O que eu não recomendo, rs).
 link do video
+[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/installelasticcloud.jpg)](https://youtu.be/YHra49modNA "Instalação do Elasticsearch e Kibana no Windows")
 
 ## Instalação do Docker e Git no Windows:
 Pra que não conseguir criar uma conta no Google Cloud, uma opção é realizar a instalação via Docker no Windows, lembrando que o recomendado para melhor acompanhamento dos dias de treinamento é fazer no Google Cloud.
