@@ -112,8 +112,7 @@ Segue abaixo os links de cada um dos Downloads:
 * Docker para Windows - https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe
 * Git - https://github.com/git-for-windows/git/releases/download/v2.26.0.windows.1/Git-2.26.0-64-bit.exe
 
-Segue um vídeo que auxilia na execução do nosso laboratório nesse cenário:
-Link do vídeo
+**Observação:** Para que você consiga instalar o Docker no Windows, seu Windows precisa ser 10 nas versões PRO ou Enterprise, caso contrário ele não instala.
 
 
 
