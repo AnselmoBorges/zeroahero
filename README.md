@@ -2,7 +2,7 @@
 * **Criado por:** Anselmo Borges<br>
 * **Última atualização:** 29.03.2020
 
-[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/installgcp.jpg)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
+[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/Slide1.jpg)
 
 Nesse repositório estarão dispostos os arquivos necessários para configuração do ambiente, lembrando que vamos subir esse ambiente usando Google Cloud, o custo do mesmo é de responsabilidade do Aluno, estimo que a utilização do mesmo em umas 3 horas dará menos do que 10 reais, portanto lembre-se de excluir o ambiente depois de utilizado, caso contrário ele será cobrado enquanto ligado.
 
@@ -20,7 +20,7 @@ Acho que o processo de cadastro dura menos de 3 min e você já pode usar.
 ## Configuração do servidor:
 Iremos criar um CentOS7 com 1VCPU, 3,75GB de RAM e 20GB de disco. Isso é mais do que o suficiente para nossos testes. Para criar sua maquina faça conforme vídeo abaixo (Clique na imagem para ver):
 
-[![](https://i9.ytimg.com/vi/aV1euh4B4XE/mqdefault.jpg?time=1586022625587&sqp=CMiRo_QF&rs=AOn4CLBCs3sas1KsyKZJxPETvBfxLuQJpQ)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
+[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/installkibanaelasticdocker.jpg)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
 
 ## Pré requisitos no S.O:
 * Docker instalado
