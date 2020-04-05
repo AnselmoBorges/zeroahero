@@ -245,40 +245,37 @@ Observação: Reparar que o campo timestamp está com o valor padrão (horário 
 **Implementando o Plugin Date e indexando no Elasticsearch**
 ```
 input {
-
-  file {
+ file {
      path => "${PWD}/movies.json"
-     sincedb_path => "/dev/null"
      start_position => "beginning"
-  }
-
+     sincedb_path => "/dev/null" 
+}
 }
 
-
 filter {
+   
+    json {
 
-   json {
-     source => "message"
-   }
+      source => "message"
+    }
+ 
+    date {
 
-   date {
-     match => [ "Release_date" , "MMM dd yyyy" ]
-     target => "@timestamp"
+      match => [ "release_date" , "yyyy-MM-dd" ]
+      target => "@timestamp" 
+    }
 
-   }
 }
 
 
 output {
 
-#stdout {}
-
+ stdout { }
  elasticsearch {
-
-     index => "logstash-movies"
-  }
-
+   index => "logstash-movies"
+ }
 }
+
 ```
 **Iniciar o serviço sem parâmetro**
 ```
