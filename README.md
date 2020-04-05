@@ -20,7 +20,7 @@ Acho que o processo de cadastro dura menos de 3 min e você já pode usar.
 ## Configuração do servidor:
 Iremos criar um CentOS7 com 1VCPU, 3,75GB de RAM e 20GB de disco. Isso é mais do que o suficiente para nossos testes. Para criar sua maquina faça conforme vídeo abaixo (Clique na imagem para ver):
 
-[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/installkibanaelasticdocker.jpg)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
+[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/installgcp.jpg)](https://youtu.be/3PldhJq3ANc "Criação da infra no Google Cloud")
 
 ## Pré requisitos no S.O:
 * Docker instalado
