@@ -248,7 +248,7 @@ PUT clientes/
 ```
 
 ## API's
-** cat API**
+**cat API**
 
 Essa API tem a função de apresentar alguma informação de maneira mais "human-readable" possível.
 
@@ -259,14 +259,14 @@ GET _cat/nodes?v
 ```
 Alocação de shards:
 ```
-GET _cat/allocation
+GET_c at/allocation
 ```
 Tarefas executando no cluster:
 ```
 GET _cat/tasks
 ```
 
-** cluster/health**
+**cluster/health**
 
 Responsável por apresentar com detalhes a saúde atual do cluster.
 
@@ -284,7 +284,7 @@ Para conferir os impedimentos de alocação use a API abaixo:
 GET _cluster/allocation/explain
 ```
 
-** bulk/**
+**bulk/**
 
 Para não gastarmos recursos computacionais indexando documentos 1 a 1, podemos utilizar a API de bulk para indexar vários documentos de uma única vez.
 
