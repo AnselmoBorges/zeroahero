@@ -105,6 +105,10 @@ sudo metricbeat modules enable apache
 sudo metricbeat restart
 ```
 
+Para você que perdeu algo da live e precisa ver como foi feito, segue um video abaixo que explica (clique na imagem):
+[![(https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/beats.jpg)](https://youtu.be/2wFSbVGGS4w)]
+
+
 ## Laboratório de APM
 
 **Clonar o repositorio do .git da aplicação modelo para a home do seu usuário**
