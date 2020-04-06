@@ -28,10 +28,10 @@ sudo metricbeat setup
 sudo service metricbeat start
 ```
 Na imagem abaixo temos um exemplo do que é coletado no Metricbeats no Dashboard que ele já configura pra vc!
-![Slide2](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/metricdocker.png)
+![Slide2](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/systemmetrics.png)
 
 Podemos ver o Dashboard de Docker também com os cointainers e outras infos.
-![Slide2](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/metricdocker.png)
+![Slide6](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/metricdocker.png)
 
 ## Usando o Filebeats para coletar logs de S.O e alimentar dados para outras ferramentas:
 Agora vamos instalar o Filebeat, uma ferramenta que coleta logs dos mais diversos, Sistema Operacional, Apache, MySQL, Postgres, Kafka e muitos outros, é uma ferramenta perfeita para monitorarmos atividades dos serviços, realizarmos troubleshootings e detectarmos anomalias em combinado com as funções de Machine Learning do próprio Elastic.
