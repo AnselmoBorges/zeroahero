@@ -30,6 +30,9 @@ sudo service metricbeat start
 Na imagem abaixo temos um exemplo do que é coletado no Metricbeats no Dashboard que ele já configura pra vc!
 ![Slide2](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/metricdocker.png)
 
+Podemos ver o Dashboard de Docker também com os cointainers e outras infos.
+![Slide2](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/metricdocker.png)
+
 ## Usando o Filebeats para coletar logs de S.O e alimentar dados para outras ferramentas:
 Agora vamos instalar o Filebeat, uma ferramenta que coleta logs dos mais diversos, Sistema Operacional, Apache, MySQL, Postgres, Kafka e muitos outros, é uma ferramenta perfeita para monitorarmos atividades dos serviços, realizarmos troubleshootings e detectarmos anomalias em combinado com as funções de Machine Learning do próprio Elastic.
 
@@ -47,7 +50,7 @@ sudo filebeat setup
 sudo service filebeat start
 ```
 Com o Filebeat instalado, podemos ver no dashboards alguns logs, logins SSH, utilizações de sudo.
-![Slide2](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/filebeat.png)
+![Slide3](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/filebeat.png)
 
 Mas para maiores informações de segurança apresento-lhes o **Auditbeat**.
 
@@ -66,7 +69,7 @@ sudo service auditbeat start
 ```
 Na imagem podemos ter uma ideia da monitoração.
 
-![Slide3](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/SIEM.png)
+![Slide4](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/SIEM.png)
 
 ## Instalando HTTPD e Monitorando métricas e logs do Apache
 **Instalando o Apache (HTTPD) e Verificando o Monitoramento Padrão http://seuipexterno/server-status**
