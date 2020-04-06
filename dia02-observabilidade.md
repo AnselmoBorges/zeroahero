@@ -66,7 +66,7 @@ sudo service auditbeat start
 ```
 Na imagem podemos ter uma ideia da monitoração.
 
-![Slide3](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/filebeat.png)
+![Slide3](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/SIEM.png)
 
 ## Instalando HTTPD e Monitorando métricas e logs do Apache
 **Instalando o Apache (HTTPD) e Verificando o Monitoramento Padrão http://seuipexterno/server-status**
