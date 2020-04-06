@@ -106,8 +106,8 @@ sudo metricbeat restart
 ```
 
 Para você que perdeu algo da live e precisa ver como foi feito, segue um video abaixo que explica (clique na imagem):
-[![(https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/beats.jpg)](https://youtu.be/2wFSbVGGS4w)]
 
+[![](https://github.com/AnselmoBorges/zerotohero/blob/master/imagens/beats.jpg)](https://youtu.be/2wFSbVGGS4w "Instalação dos Beats")
 
 ## Laboratório de APM
 
