@@ -246,6 +246,15 @@ PUT clientes/
   }
 }
 ```
+## Tipos de Nós
+
+**Data Node**
+
+**Master Node**
+
+**Ingest Node**
+
+**Coordinator Node**
 
 ## API's
 **cat API**
